@@ -5,9 +5,9 @@ This repository describes how data available on GEO GSEXXXXXXX were generated an
 
 Table of content
 ----------------
-  * [Valid pairs generation](#validpairgeneration)
-  * [How to generate heatmap](#generateheatmap)
-  * [How to generate heatmap with low memory computer](#generateheatmaplowmemory)
+  * [Valid pairs generation](#valid-pair-generation)
+  * [How to generate heatmap](#how-to-generate-heatmap)
+  * [How to generate heatmap with low memory computer](#how-to-generate-heatmap-with-low-memory-computer)
 
 Valid pair generation
 ---------------------
