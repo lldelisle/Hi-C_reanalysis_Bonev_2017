@@ -5,9 +5,9 @@ This repository describes how data available on GEO GSEXXXXXXX were generated an
 
 Table of content
 ----------------
-    * [Valid pairs generation](#validpairgeneration)
-    * [How to generate heatmap](#generateheatmap)
-    * [How to generate heatmap with low memory computer](#generateheatmaplowmemory)
+  * [Valid pairs generation](#validpairgeneration)
+  * [How to generate heatmap](#generateheatmap)
+  * [How to generate heatmap with low memory computer](#generateheatmaplowmemory)
 
 Valid pair generation
 ---------------------
@@ -124,3 +124,5 @@ $ tabix -s3 -b4 -e4 ${pairs}
 
 Then follow the classical tutorial with `cooler makebins`, `cooler cload` and `cooler balance`.
 
+The picture will be very similar:
+![pyGenomeTracks example with ES HoxD cluster using only a subset](./example/example2.png)
