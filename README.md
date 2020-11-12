@@ -1,7 +1,7 @@
 Hi-C reanalysis of some datasets from Bonev et al. 2017
 =======================================================
 
-This repository describes how data available on GEO GSEXXXXXXX were generated and how people can generate heatmap for the region they want.
+This repository describes how data available on GEO GSE161259 were generated and how people can generate heatmap for the region they want.
 
 Table of content
 ----------------
@@ -126,3 +126,5 @@ Then follow the classical tutorial with `cooler makebins`, `cooler cload` and `c
 
 The picture will be very similar:
 ![pyGenomeTracks example with ES HoxD cluster using only a subset](./example/example2.png)
+
+If you don't manage to run pyGenomeTracks (`pgt`), you can use the graphical version of pyGenomeTracks on [the galaxy european server](https://usegalaxy.eu/).
