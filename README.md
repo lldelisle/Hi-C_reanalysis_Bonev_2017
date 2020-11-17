@@ -1,7 +1,7 @@
 Hi-C reanalysis of some datasets from Bonev et al. 2017
 =======================================================
 
-This repository describes how data available on GEO GSE161259 were generated and how people can generate heatmap for the region they want.
+This repository describes how data available on GEO [GSE161259](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161259) were generated and how people can generate heatmap for the region they want.
 
 Table of content
 ----------------
@@ -32,8 +32,8 @@ $ sizes=/home/ldelisle/softwares/Hi-C_reanalysis_Bonev_2017/mm10.size
 
 First, download the valid pair file corresponding to your dataset and your chromosome. For example ES chr2.
 ```bash
-$ wget "ftp://XXXXX/XXX.validPairs.csort.gz"
-$ pairs="XXX.validPairs.csort.gz"
+$ wget "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE161nnn/GSE161259/suppl/GSE161259%5FES%5Fchr2%2EvalidPairs%2Ecsort%2Etxt%2Egz"
+$ pairs="GSE161259_ES_chr2.validPairs.csort.txt.gz"
 ```
 
 Then, index it using tabix:
@@ -76,16 +76,16 @@ You need to generate a configuration file, the full documentation is [here](http
 [x-axis]
 
 [raw]
-file = XXXX_raw.5kb.cool
+file = GSE161259_ES_chr2_raw.5kb.cool
 depth = 1000000
-title = Hi-C XX (Bonev et al.) 5kb raw
+title = Hi-C ES (Bonev et al.) 5kb raw
 min_value = 0
 max_value = 300
 
 [balanced]
-file = XXXX.5kb.cool
+file = GSE161259_ES_chr2.5kb.cool
 depth = 1000000
-title = Hi-C XX (Bonev et al.) 5kb balanced
+title = Hi-C ES (Bonev et al.) 5kb balanced
 min_value = 0
 max_value = 0.02
 
