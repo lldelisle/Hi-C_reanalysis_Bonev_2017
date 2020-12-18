@@ -58,7 +58,7 @@ cooler makebins ${sizes} "${bin}000" > mm10.${bin}kb.bins
 Load the pairs into a matrix of fixed bins (cool file), this operation can take several minutes:
 
 ```bash
-coolFile=${pairs/.validPairs.csort.gz/_raw.${bin}kb.cool}
+coolFile=${pairs/.validPairs.csort.txt.gz/_raw.${bin}kb.cool}
 cooler cload tabix -p 1 -c2 7 -p2 8 -s 2 --assembly mm10 mm10.${bin}kb.bins ${pairs} ${coolFile}
 # If it fails because of memory or cpu error you can try to increase the number after -s, for example:
 cooler cload tabix -p 1 -c2 7 -p2 8 -s 4 --assembly mm10 mm10.${bin}kb.bins ${pairs} ${coolFile}
