@@ -13,7 +13,7 @@ Table of content
 Valid pair generation
 ---------------------
 
-In order to easily use these datasets which are one of the Hi-C sequenced to the highest depth. I decided to remap 3 of the datasets published by [Bonev et al. 2007](https://doi.org/10.1016/j.cell.2017.09.043). I did it in October/November 2018 with the last version of HiCUP available at that time (version 0.6.1) using the facilities of the Scientific IT and Application Support Center of EPFL (slurm scheduler). All scripts used to generate the valid pairs are available in the folder scripts.
+In order to easily use these datasets which are one of the Hi-C sequenced to the highest depth. I decided to remap 3 of the datasets published by [Bonev et al. 2017](https://doi.org/10.1016/j.cell.2017.09.043). I did it in October/November 2018 with the last version of HiCUP available at that time (version 0.6.1) using the facilities of the Scientific IT and Application Support Center of EPFL (slurm scheduler). All scripts used to generate the valid pairs are available in the folder scripts.
 
 How to generate heatmap
 -----------------------
