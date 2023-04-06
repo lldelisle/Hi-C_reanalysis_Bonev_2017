@@ -1,7 +1,7 @@
 Hi-C reanalysis of some datasets from Bonev et al. 2017
 =======================================================
 
-This repository describes how data available on GEO [GSE161259](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161259) were generated and how people can generate heatmap for the region they want.
+This repository describes how data available on GEO [GSE161259](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161259) and [GSE229113](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE229113) were generated and how people can generate heatmap for the region they want.
 
 Table of content
 ----------------
@@ -13,12 +13,14 @@ Table of content
 Valid pair generation
 ---------------------
 
-In order to easily use these datasets which are one of the Hi-C sequenced to the highest depth. I decided to remap 3 of the datasets published by [Bonev et al. 2017](https://doi.org/10.1016/j.cell.2017.09.043). I did it in October/November 2018 with the last version of HiCUP available at that time (version 0.6.1) using the facilities of the Scientific IT and Application Support Center of EPFL (slurm scheduler). All scripts used to generate the valid pairs are available in the folder scripts.
+In order to easily use these datasets which are one of the Hi-C sequenced to the highest depth. I decided to remap 3 of the datasets published by [Bonev et al. 2017](https://doi.org/10.1016/j.cell.2017.09.043).
+- mm10: I did it in October/November 2018 with the last version of HiCUP available at that time (version 0.6.1) using the facilities of the Scientific IT and Application Support Center of EPFL (slurm scheduler). All scripts used to generate the valid pairs are available in the folder scripts_mm10.
+- mm39: I remapped in March 2023 with the last version of HiCUP available at that time (version 0.9.2) using the facilities of the Scientific IT and Application Support Center of EPFL (slurm scheduler). All scripts used to generate the valid pairs and the cool files are available in the folder scripts_mm39.
 
 How to generate heatmap
 -----------------------
 
-I am going to describe here, step by step how you can use the valid pairs to generate the heatmap of your choice.
+I am going to describe here, step by step how you can use the valid pairs to generate the heatmap of your choice. If you want to generate the heatmap for mm39 at 5kb or 20kb resolution. You don't need to follow all these steps create the conda environment and then jump to the pygenometracks step.
 
 You will need to have cooler, tabix and bgzip (optionally pyGenomeTracks to display the heatmap at the end). The easiest way to have all of them is to use conda.
 
@@ -29,13 +31,13 @@ $ conda create -n cooler -c conda-forge -c bioconda cooler
 $ conda activate cooler
 ```
 
-You will also need to download the mm10.size file and put its path in a variable:
+You will also need to download the mm10.size/mm39.size file and put its path in a variable:
 
 ```bash
 sizes=/home/ldelisle/softwares/Hi-C_reanalysis_Bonev_2017/mm10.size
 ```
 
-First, download the valid pair file corresponding to your dataset and your chromosome. For example ES chr2.
+First, download the valid pair file corresponding to your dataset, your genome and your chromosome. For example ES chr2 mm10.
 
 ```bash
 wget "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE161nnn/GSE161259/suppl/GSE161259%5FES%5Fchr2%2EvalidPairs%2Ecsort%2Etxt%2Egz"
@@ -79,7 +81,7 @@ To see the heatmap you can use pyGenometracks.
 To install it into your conda environment run:
 
 ```bash
-conda install -c conda-forge -c bioconda 'pygenometracks>=3.5.1'
+conda install -c conda-forge -c bioconda 'pygenometracks>=3.8'
 ```
 
 You need to generate a configuration file, the full documentation is [here](https://pygenometracks.readthedocs.io). Copy this file into a text file (example.ini), adapting to your case.
